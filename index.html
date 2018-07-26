@@ -14,13 +14,40 @@
         
         // This function should return a string randomly chosen from an array.
         function computerPlay(choice){
-            choice = Math.random(3)
-            return choice
+            choice = choice[getRandomInt(3)];
+            return choice;
         };
 
+        function playRound(){
+            if (playerSelection == computerSelection){
+                message = "Tie. How anticlimactic.";
+                return message;
+            }
+            else if (playerSelection == )
+        };
+/*if playerSelection is rock and computerSelection is rock
+
+message says "Tie"
+
+else if playerSelection is rock and computerSelection is paper
+
+message says "Computer wins!"
+
+else
+
+message says "You won!"
+
+return string message*/
+
         let playerSelection = "rock"; //prompt("Please choose Rock, Paper, or Scissors");
-        let computerSelection;
+        let computerSelection = computerPlay(choices);
         let choices = ["rock", "paper", "scissors"];
+        let message = "";
+        
+        // Function returns a random int from a given range
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        };
 
 
     </script>

@@ -1,1 +1,87 @@
-<p><strong><u>ROCK PAPER SCISSOR GAME</u></strong></p><p>computerPlay()</p><p>	randomize "Rock", "Paper", or "Scissors"</p><p>	return string </p><p><br></p><p>playRound(playerSelection, computerSelection) # should be case insensitive</p><p>	if playerSelection is rock and computerSelection is rock</p><p>		message says "Tie"</p><p>	else if playerSelection is rock and computerSelection is paper</p><p>		message says "Computer wins!"</p><p>	else</p><p>		message says "You won!"</p><p>	return string message</p><p><br></p><p>isRock(selection)</p><p>	if selection is rock</p><p>		return true</p><p>	else</p><p>		return false</p><p>isPaper(selection)</p><p>	if selection is paper</p><p>		return true</p><p>	else</p><p>		return false</p><p>isScissor(selection)</p><p>	if selection is scissor</p><p>		return true</p><p>	else</p><p>		return false</p><p><br></p><p>storeVictor(message)</p><p>	add message to victor[]</p><p>	</p><p>playerSelection = prompt() # convert to lower case</p><p>computerSelection = computerPlay()</p><p><span>victor[] = new array</span></p><p><br></p><p>game()</p><p>	x = 0</p><p>	while x &lt; 5</p><p>		playRound()</p><p>		increase x + 1</p><p><br></p><p><br></p>
+ROCK PAPER SCISSOR GAME
+
+computerPlay()
+
+	randomize "Rock", "Paper", or "Scissors"
+
+	return string 
+
+
+
+playRound(playerSelection, computerSelection) # should be case insensitive
+
+	if playerSelection is rock and computerSelection is rock
+
+		message says "Tie"
+
+	else if playerSelection is rock and computerSelection is paper
+
+		message says "Computer wins!"
+
+	else
+
+		message says "You won!"
+
+	return string message
+
+
+
+isRock(selection)
+
+	if selection is rock
+
+		return true
+
+	else
+
+		return false
+
+isPaper(selection)
+
+	if selection is paper
+
+		return true
+
+	else
+
+		return false
+
+isScissor(selection)
+
+	if selection is scissor
+
+		return true
+
+	else
+
+		return false
+
+
+
+storeVictor(message)
+
+	add message to victor[]
+
+	
+
+playerSelection = prompt() # convert to lower case
+
+computerSelection = computerPlay()
+
+victor[] = new array
+
+
+
+game()
+
+	x = 0
+
+	while x < 5
+
+		playRound()
+
+		increase x + 1
+
+
+
+
