@@ -10,7 +10,7 @@
 </head>
 <body>
     <script>
-        game()
+        //game()
         
         // This function should return a string randomly chosen from an array.
         function computerPlay(choice){
@@ -25,23 +25,39 @@
             }
             //else if (playerSelection == )
         };
-/*if playerSelection is rock and computerSelection is rock
+        
+        // Function returns true if conditions are met. False if not met.
+        function isRock(choice){
+            if (choice == "rock"){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
 
-message says "Tie"
+        function isPaper(choice){
+            if (choice == "paper"){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
 
-else if playerSelection is rock and computerSelection is paper
+        function isScissors(choice){
+            if (choice == "scissors"){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
 
-message says "Computer wins!"
-
-else
-
-message says "You won!"
-
-return string message*/
-
-        let playerSelection = "rock"; //prompt("Please choose Rock, Paper, or Scissors");
-        let computerSelection = computerPlay(choices);
+        let playerInput = prompt("Please enter 'rock', 'paper', or 'scissors'");
+        let playerSelection = playerInput.toLowerCase();
         let choices = ["rock", "paper", "scissors"];
+        //let computerSelection = computerPlay(choices);
         let message = "";
         
         // Function returns a random int from a given range
