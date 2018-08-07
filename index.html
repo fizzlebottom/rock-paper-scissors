@@ -10,38 +10,57 @@
 </head>
 <body>
     <script>
-        game()
+        
+
+        // Variables
+        let choices = ["rock", "paper", "scissors"];
+        let message = "";
+
+        console.log(game());
         
         // This function should play a round 5 times
         function game(){
+            let playerSelection = getPlayerSelection();
+            let computerSelection = computerPlay(choices);
 
-        }
+            let round = playRound(playerSelection, computerSelection);
+            return round;
+        };
+        
+        // This function returns a string input.
+        function getPlayerSelection(){
+            let playerInput = prompt('Enter "rock", "paper", or "scissors"');
+            let playerSelection = playerInput.toLowerCase();
+            return playerSelection
+        };
         
         // This function should return a string randomly chosen from an array.
-        function computerPlay(choice){
-            choice = choice[getRandomInt(3)];
-            return choice;
+        function computerPlay(c){
+            c = c[getRandomInt(3)];
+            return c;
         };
+
         // Function returns conditional message
-        function playRound(playerSelection, computerSelection){
-            if (playerSelection == computerSelection){
+        function playRound(pSelection, cSelection){
+            if (pSelection == cSelection){
                 message = "Tie. How anticlimactic.";
                 return message;
-            } // FIGURE THIS LOGIC OUT LOL
-            else if (isRock(playerSelection) && isScissors(computerSelection) | 
-                        isScissors(playerSelection) && isPaper(computerSelection) |
-                        isPaper(playerSelection) && isRock(computerSelection)){
+            }
+            else if (isRock(pSelection) && isScissors(cSelection) | 
+                        isScissors(pSelection) && isPaper(cSelection) |
+                        isPaper(pSelection) && isRock(cSelection)){
                 message = "You won!";
                 return message;
             }
             else{
                 message = "You lose!";
+                return message;
             }
         };
         
         // Function returns true if conditions are met. False if not met.
         function isRock(choice){
-            if (choice == "rock"){
+            if (choice == choices[0]){
                 return true;
             }
             else {
@@ -50,7 +69,7 @@
         };
         // Function returns true if conditions are met. False if not met.
         function isPaper(choice){
-            if (choice == "paper"){
+            if (choice == choices[1]){
                 return true;
             }
             else {
@@ -59,19 +78,13 @@
         };
         // Function returns true if conditions are met. False if not met.
         function isScissors(choice){
-            if (choice == "scissors"){
+            if (choice == choices[2]){
                 return true;
             }
             else{
                 return false;
             }
         };
-
-        let playerInput = prompt("Please enter 'rock', 'paper', or 'scissors'");
-        let playerSelection = playerInput.toLowerCase();
-        let choices = ["rock", "paper", "scissors"];
-        let computerSelection = computerPlay(choices);
-        let message = "";
         
         // Function returns a random int from a given range
         function getRandomInt(max) {
