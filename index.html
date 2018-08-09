@@ -46,10 +46,10 @@
                 message = "Tie. How anticlimactic.";
                 return message;
             }
-            else if (isRock(pSelection) && isScissors(cSelection) | 
-                        isScissors(pSelection) && isPaper(cSelection) |
+            else if (isRock(pSelection) && isScissors(cSelection) || 
+                        isScissors(pSelection) && isPaper(cSelection) ||
                         isPaper(pSelection) && isRock(cSelection)){
-                message = "You won!";
+                message = '${pSelection} beats ${cSelection}! You win!';
                 return message;
             }
             else{
