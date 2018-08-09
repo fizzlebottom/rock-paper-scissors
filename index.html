@@ -11,20 +11,20 @@
 <body>
     <script>
         
-
         // Variables
         let choices = ["rock", "paper", "scissors"];
         let message = "";
-
-        console.log(game());
+        game();
         
         // This function should play a round 5 times
         function game(){
-            let playerSelection = getPlayerSelection();
-            let computerSelection = computerPlay(choices);
+            for(let i = 0; i < 5; i++){
+                let playerSelection = getPlayerSelection();
+                let computerSelection = computerPlay(choices);
 
-            let round = playRound(playerSelection, computerSelection);
-            return round;
+                let round = playRound(playerSelection, computerSelection);
+                console.log(round);
+            }
         };
         
         // This function returns a string input.
@@ -35,9 +35,9 @@
         };
         
         // This function should return a string randomly chosen from an array.
-        function computerPlay(c){
-            c = c[getRandomInt(3)];
-            return c;
+        function computerPlay(choiceArray){
+            computerChoice = choiceArray[getRandomInt(3)];
+            return computerChoice;
         };
 
         // Function returns conditional message
@@ -90,8 +90,6 @@
         function getRandomInt(max) {
             return Math.floor(Math.random() * Math.floor(max));
         };
-
-
     </script>
 </body>
 </html>
