@@ -49,7 +49,7 @@
             else if (isRock(pSelection) && isScissors(cSelection) || 
                         isScissors(pSelection) && isPaper(cSelection) ||
                         isPaper(pSelection) && isRock(cSelection)){
-                message = '${pSelection} beats ${cSelection}! You win!';
+                message = `${pSelection[0].toUpperCase() + pSelection.substr(1)} beats ${cSelection}! You win!`;
                 return message;
             }
             else{
